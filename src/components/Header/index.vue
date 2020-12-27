@@ -74,17 +74,32 @@ export default {
 
       const location = {
         name : 'search',
+        query: this.$route.query
       }
       if (keyword) {
         location.params = {keyword}
-        location.query = {
-          keyword2: this.keyword.toUpperCase()
-        }
+        // location.query = {
+        //   keyword2: this.keyword.toUpperCase()
+        // }
       }
 
-      this.$router.push(location)
+      if (this.$route.name === 'search') {
+        this.$router.replace(location)
+      }else{
+        this.$router.push(location)
+      }
     },
   },
+
+  mounted(){
+    this.$bus.$on('removeKeyword',()=>{
+      this.keyword = ''
+    })
+  },
+
+  beforeDestroy(){
+        this.$bus.off('removeKeyword')
+  }
 };
 </script>
 

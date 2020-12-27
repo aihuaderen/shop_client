@@ -1,0 +1,43 @@
+[{
+    "id": "1",
+    "imageUrl": "/images/like_02.png",
+    "text": "朝天锅,可蒸可炸可煮可炒,万物皆可入锅",
+    "price": "¥111.00"
+  },
+  {
+    "id": "2",
+    "imageUrl": "/images/like_03.png",
+    "text": "真无线蓝牙耳机双耳运动跑步入耳式隐形安卓通用挂脖头戴式",
+    "price": "¥222.00"
+
+  },
+  {
+    "id": "3",
+    "imageUrl": "/images/like_01.png",
+    "text": "阳光美包新款单肩包女包时尚子母包四件套女",
+    "price": "¥333.00"
+
+  },
+  {
+    "id": "4",
+    "imageUrl": "/images/like_01.png",
+    "text": "阳光美包新款单肩包女包时尚子母包四件套女",
+    "price": "¥666.00"
+
+  },
+  {
+    "id": "5",
+    "imageUrl": "/images/like_02.png",
+    "text": "朝天锅,可蒸可炸可煮可炒,万物皆可入锅",
+    "price": "¥999.00"
+
+  },
+  {
+    "id": "6",
+    "imageUrl": "/images/like_03.png",
+    "text": "真无线蓝牙耳机双耳运动跑步入耳式隐形安卓通用挂脖头戴式",
+    "price": "¥999.00"
+
+  }
+]
+

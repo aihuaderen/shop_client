@@ -9,13 +9,9 @@
                                 <img :src="banner.imageUrl" style="width: 100%; height:464px;"/>
                             </div>
                         </div>
-                        <!-- 如果需要分页器 -->
-                        <div class="swiper-pagination"></div>
-                        
-                        <!-- 如果需要导航按钮 -->
-                        <div class="swiper-button-prev"></div>
-                        <div class="swiper-button-next"></div>
-                        
+                            <div class="swiper-pagination" slot="pagination"></div>
+                            <div class="swiper-button-prev" slot="button-prev"></div>
+                            <div class="swiper-button-next" slot="button-next"></div>
                     </div>
                 </div>
                 <div class="right">
@@ -113,57 +109,29 @@ export default {
           bannerList: state => state.home.bannerList
       })
   },
-
-  mounted(){
-
-    //   new Swiper (this.$refs.swiper, {
-    //       direction:'horizontal',
-    //       loop:true,
-    //       autoplay:{
-    //           delay:4000,
-    //           disableOnInteraction: false,//用户操作后是否停止自动轮播
-    //       },
-    //         //分页器
-    //       pagination:{
-    //           el: '.swiper-pagination',
-    //       },
-    //         //前进houtuo\i按钮
-    //       navigation :{
-    //           nextEl: '.swiper-button-next',
-    //           prevEl: '.swiper-button-prev',
-    //       },
-    //   })
-  },
-
-  //此时只是数据有了,页面还没有更新
-  //watch: 监视bannerLiat,就可以自动有没有数据更新
-  //nextTick: 界面更新后执行回调
-      watch: {
-        bannerList () {
-            this.$nextTick(()=>{
-                new Swiper (this.$refs.swiper, {
-                    // direction: 'horizontal', // 水平切换选项
-                    loop: true, // 循环模式选项
-                    autoplay: { // 自动轮播
-                    delay: 4000,
-                    disableOnInteraction: false, // 用户操作后是否停止自动轮播
-                    }, 
-                    // 如果需要分页器
-                    pagination: {
-                    el: '.swiper-pagination',
-                    },
-                    // 如果需要前进后退按钮
-                    navigation: {
-                    nextEl: '.swiper-button-next',
-                    prevEl: '.swiper-button-prev',
-                    },
-                })        
-
-            })
-        }
+    data () {
+    return {
+      swiperOptions: {
+        // direction: 'horizontal', // 水平切换选项
+        loop: true, // 循环模式选项
+        autoplay: { // 自动轮播
+          delay: 4000,
+          disableOnInteraction: false, // 用户操作后是否停止自动轮播
+        }, 
+        // 如果需要分页器
+        pagination: {
+          el: '.swiper-pagination',
+        },
+        // 如果需要前进后退按钮
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+      }
     }
-
+  },
 }
+
 </script>
 
 <style lang="less" scoped>
